@@ -12,12 +12,12 @@ public class Autor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    @Column(unique=true)
     private String email;
     private String descricao;
     @NotNull
     private LocalDateTime cadastrado = LocalDateTime.now();
 
+    @Deprecated
     public Autor(){
     }
 
@@ -26,5 +26,6 @@ public class Autor {
         this.email = email;
         this.descricao = descricao;
     }
+
 
 }

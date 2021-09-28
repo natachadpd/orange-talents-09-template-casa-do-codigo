@@ -23,6 +23,10 @@ public class AutorForm {
         this.descricao = descricao;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public Autor converterAutor() {
         return new Autor(nome, email, descricao);
     }
