@@ -1,7 +1,7 @@
 package br.com.zupacademy.natacha.casadocodigo.controller;
 
 import br.com.zupacademy.natacha.casadocodigo.Repository.AutorRepository;
-import br.com.zupacademy.natacha.casadocodigo.controller.dto.AutorForm;
+import br.com.zupacademy.natacha.casadocodigo.controller.form.AutorForm;
 import br.com.zupacademy.natacha.casadocodigo.model.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

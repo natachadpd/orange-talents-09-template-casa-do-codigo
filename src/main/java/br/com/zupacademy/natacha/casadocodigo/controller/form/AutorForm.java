@@ -1,4 +1,4 @@
-package br.com.zupacademy.natacha.casadocodigo.controller.dto;
+package br.com.zupacademy.natacha.casadocodigo.controller.form;
 
 import br.com.zupacademy.natacha.casadocodigo.model.Autor;
 import org.hibernate.validator.constraints.Length;
