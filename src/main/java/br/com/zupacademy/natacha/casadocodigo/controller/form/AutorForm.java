@@ -1,6 +1,7 @@
 package br.com.zupacademy.natacha.casadocodigo.controller.form;
 
 import br.com.zupacademy.natacha.casadocodigo.model.Autor;
+import br.com.zupacademy.natacha.casadocodigo.validate.generic.ValorUnico;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -10,6 +11,7 @@ public class AutorForm {
 
     @NotBlank
     private String nome;
+    @ValorUnico(domainClass = Autor.class, fieldName = "email")
     @NotBlank
     @Email
     private String email;
