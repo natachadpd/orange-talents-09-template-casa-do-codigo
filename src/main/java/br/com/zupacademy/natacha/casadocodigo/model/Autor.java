@@ -17,6 +17,7 @@ public class Autor {
     @NotNull
     private LocalDateTime cadastrado = LocalDateTime.now();
 
+
     @Deprecated
     public Autor(){
     }

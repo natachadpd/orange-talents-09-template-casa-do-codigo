@@ -9,16 +9,20 @@ import javax.validation.constraints.NotBlank;
 
 public class CategoriaForm {
 
+    private Long id;
     @NotBlank
     @JsonProperty
     @ValorUnico(domainClass = Categoria.class, fieldName = "nomeCategoria")
     private String nomeCategoria;
 
 
+    public Long getId() {
+        return id;
+    }
+
     public String getNomeCategoria() {
         return nomeCategoria;
     }
-
 
     public Categoria converterCategoria() {
         return new Categoria(nomeCategoria);
@@ -26,4 +30,3 @@ public class CategoriaForm {
 
 
 }
-
