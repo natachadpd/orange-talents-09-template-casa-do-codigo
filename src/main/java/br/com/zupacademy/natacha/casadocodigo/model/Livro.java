@@ -1,6 +1,7 @@
 package br.com.zupacademy.natacha.casadocodigo.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -17,9 +18,11 @@ public class Livro {
     private Integer numeroPaginas;
     private Integer isbn;
     private LocalDate dataPublicacao;
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "autor_id")
     private Autor autor;

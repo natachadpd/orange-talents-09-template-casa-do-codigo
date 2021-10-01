@@ -40,9 +40,7 @@ public class LivroForm {
     @NotNull
     @Future
     private LocalDate dataPublicacao;
-    @NotNull
     private Long idCategoria;
-    @NotNull
     private Long idAutor;
 
 
