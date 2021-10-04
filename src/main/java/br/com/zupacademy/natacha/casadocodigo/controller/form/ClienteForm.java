@@ -16,6 +16,7 @@ import javax.validation.constraints.NotBlank;
 public class ClienteForm {
 
 
+
     @NotBlank
     @Email
     @ValorUnico(domainClass = Cliente.class, fieldName = "email")
@@ -63,7 +64,10 @@ public class ClienteForm {
 
     public Cliente converterCliente(EntityManager manager) {
         Pais pais = manager.find(Pais.class, idPais);
-        Estado estado = manager.find(Estado.class, idEstado);
+        Estado estado = null;
+       if (idEstado != null) {
+            estado = manager.find(Estado.class, idEstado);
+       }
         return new Cliente(email, nome, sobrenome, documento, endereco, complemento, cidade, telefone, cep, pais, estado);
     }
 

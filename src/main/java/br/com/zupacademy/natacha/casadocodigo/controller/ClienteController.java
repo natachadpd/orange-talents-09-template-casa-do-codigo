@@ -1,5 +1,6 @@
 package br.com.zupacademy.natacha.casadocodigo.controller;
 
+import br.com.zupacademy.natacha.casadocodigo.controller.dto.ClienteDto;
 import br.com.zupacademy.natacha.casadocodigo.controller.form.ClienteForm;
 import br.com.zupacademy.natacha.casadocodigo.model.Cliente;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +24,10 @@ public class ClienteController {
 
     @PostMapping
     @Transactional
-    public void cadastrarCliente(@RequestBody @Valid ClienteForm clienteForm){
+    public ClienteDto cadastrarCliente(@RequestBody @Valid ClienteForm clienteForm){
         Cliente cliente = clienteForm.converterCliente(manager);
         manager.persist(cliente);
+        return new ClienteDto(cliente.getId());
     }
 
 }

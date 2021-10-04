@@ -16,7 +16,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 public @interface ExistsId {
 
-    String message() default "Verifique o País informado";
+    String message() default "Não encontrado";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
     String fieldName();
