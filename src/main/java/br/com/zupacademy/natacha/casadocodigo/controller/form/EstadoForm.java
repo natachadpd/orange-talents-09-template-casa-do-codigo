@@ -2,6 +2,7 @@ package br.com.zupacademy.natacha.casadocodigo.controller.form;
 
 import br.com.zupacademy.natacha.casadocodigo.model.Estado;
 import br.com.zupacademy.natacha.casadocodigo.model.Pais;
+import br.com.zupacademy.natacha.casadocodigo.validate.generic.ExistsId;
 import br.com.zupacademy.natacha.casadocodigo.validate.generic.ValorUnico;
 
 import javax.persistence.EntityManager;
@@ -11,6 +12,7 @@ public class EstadoForm {
 
     @NotBlank
     private String nomeEstado;
+    @ExistsId(domainClass = Pais.class, fieldName = "id")
     private Long idPais;
 
     public EstadoForm(String nomeEstado, Long idPais) {
